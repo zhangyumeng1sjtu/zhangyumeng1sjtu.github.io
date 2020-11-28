@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhangyumeng1sjtu.github.io</id>
-    <title>ymzhang&apos;s Blog</title>
-    <updated>2020-11-28T13:52:29.205Z</updated>
+    <title>Ymzhang&apos;s Blog</title>
+    <updated>2020-11-28T13:58:38.096Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhangyumeng1sjtu.github.io"/>
     <link rel="self" href="https://zhangyumeng1sjtu.github.io/atom.xml"/>
-    <subtitle>Hello guys</subtitle>
+    <subtitle>Hello</subtitle>
     <logo>https://zhangyumeng1sjtu.github.io/images/avatar.png</logo>
     <icon>https://zhangyumeng1sjtu.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, ymzhang&apos;s Blog</rights>
+    <rights>All rights reserved 2020, Ymzhang&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[First Post]]></title>
+        <id>https://zhangyumeng1sjtu.github.io/post/first-post/</id>
+        <link href="https://zhangyumeng1sjtu.github.io/post/first-post/">
+        </link>
+        <updated>2020-11-28T13:57:24.000Z</updated>
+        <content type="html"><![CDATA[<p>This is my first post.</p>
+]]></content>
+    </entry>
 </feed>
