@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhangyumeng1sjtu.github.io</id>
     <title>Ymzhang&apos;s Blog</title>
-    <updated>2020-11-28T18:08:05.294Z</updated>
+    <updated>2020-11-28T18:09:19.967Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhangyumeng1sjtu.github.io"/>
     <link rel="self" href="https://zhangyumeng1sjtu.github.io/atom.xml"/>
@@ -15,9 +15,11 @@
         <link href="https://zhangyumeng1sjtu.github.io/post/first-post/">
         </link>
         <updated>2020-11-28T13:57:24.000Z</updated>
-        <summary type="html"><![CDATA[<p>这些是好不容易挤出来的只言片语，纪念一下和你们与iGEM的渊源。</p>
+        <summary type="html"><![CDATA[<!-- more -->
+<p>这些是好不容易挤出来的只言片语，纪念一下和你们与iGEM的渊源。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>这些是好不容易挤出来的只言片语，纪念一下和你们与iGEM的渊源。</p>
+        <content type="html"><![CDATA[<!-- more -->
+<p>这些是好不容易挤出来的只言片语，纪念一下和你们与iGEM的渊源。</p>
 <!-- more -->
 <p>去年今日，满怀对波士顿之旅憧憬的我成为了你们的同路人，当时怎么也不会想到这一年来的曲曲折折，也想不到有你们一起走过个人和iGEM队伍的起起落落。<br>
 这个夏天之前，可能你们对我的印象停留在第一次相遇时那个高冷正经的模样，可能是那听得云里雾里的文献分享， 可能是......半年多销声匿迹，是对项目的茫然不解，是对未来的举足无措，是失去了对远赴重洋的期许，是挣扎在大三下的内卷竞争中...... 线上一周又一周的组会，哪一次不是一边挂着zoom，一边忙着一些琐碎的小事......<br>
