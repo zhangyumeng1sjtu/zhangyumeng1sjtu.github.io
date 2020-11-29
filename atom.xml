@@ -2,13 +2,30 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhangyumeng1sjtu.github.io</id>
     <title>Ymzhang&apos;s Blog</title>
-    <updated>2020-11-29T13:07:02.841Z</updated>
+    <updated>2020-11-29T14:17:38.162Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhangyumeng1sjtu.github.io"/>
     <link rel="self" href="https://zhangyumeng1sjtu.github.io/atom.xml"/>
     <logo>https://zhangyumeng1sjtu.github.io/images/avatar.png</logo>
     <icon>https://zhangyumeng1sjtu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Ymzhang&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[关于自己 --生信打工人的自述]]></title>
+        <id>https://zhangyumeng1sjtu.github.io/post/about_me/</id>
+        <link href="https://zhangyumeng1sjtu.github.io/post/about_me/">
+        </link>
+        <updated>2020-11-29T13:48:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>工具人三连：nsdd mrlw bxhl</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>工具人三连：nsdd mrlw bxhl</p>
+<!-- more -->
+<p>鄙人张昱朦，1999年4月生，上海乡下人，目前是上海交通大学生命科学技术学院生物信息专业2017级本科生，高中毕业于华东师范大学第二附属中学。学科方向主要是生物信息学（微生物学背景为主），此外对NGS数据分析、机器学习和深度学习等领域算一知半解，生物基础较弱，代码能力不强（所以是dd）。<br>
+一直打工得不到理想结果的时候，就想写一些七七八八的东西，可能兴致来了会写一些某些课程或者文章的学习笔记，可能会分享自己做的还算成功的项目，但是估计一般就po一po日常生活（就这...）。<br>
+<img src="https://zhangyumeng1sjtu.github.io/post-images/WechatIMG315.jpeg" alt="" width="550" height="350" loading="lazy"><br>
+未来会继续在交大读硕士，想早点赚钱（干饭太积极，钱不够花），还是主要做生物学和计算机科学的交叉，具体兴趣可能是想做一些图机器学习方法在生物网络的应用。<br>
+人不算帅（眼睛比较小，脸有点大），学术不精，爱喝奶茶，想出去玩，单身可撩（划去）。希望发发post能缓解打工过程中自闭的情绪，最好会有人（fupo）关注我、评论我。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[致2020 SJTU-BioX-Shanghai]]></title>
         <id>https://zhangyumeng1sjtu.github.io/post/first-post/</id>
