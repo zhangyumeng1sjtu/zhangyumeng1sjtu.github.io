@@ -79,7 +79,7 @@
                         <input id="switch_default" type="checkbox" class="switch_default">
                         <label for="switch_default" class="toggleBtn"></label>
             </div>
-            <form id="gridea-search-form" data-update="1606650989249" action="/search/index.html">
+            <form id="gridea-search-form" data-update="1606652559225" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
             </form>
         </div>
@@ -98,7 +98,7 @@
                         <!--zh-->
                         <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
                     </div>
-                    <form id="gridea-search-form" data-update="1606650989249" action="/search/index.html">
+                    <form id="gridea-search-form" data-update="1606652559225" action="/search/index.html">
                         <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
                     </form>
                     <!--en-->
@@ -269,10 +269,10 @@
                                                     <i class="post-share"></i>
                                                     <span>Share:</span>
                                                         <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zhangyumeng1sjtu.github.io/post/first-post/"><i class="fa fa-qrcode"></i></a>
-                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhangyumeng1sjtu.github.io/post/first-post/&sharesource=qzone&title=致2020 SJTU-BioX-Shanghai&pics=https://zhangyumeng1sjtu.github.io/images/avatar.png?v=1606650989249&summary=&lt;p&gt;以下是好不容易挤出来的只言片语，纪念一下和你们与iGEM的渊源。&lt;/p&gt;
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhangyumeng1sjtu.github.io/post/first-post/&sharesource=qzone&title=致2020 SJTU-BioX-Shanghai&pics=https://zhangyumeng1sjtu.github.io/images/avatar.png?v=1606652559225&summary=&lt;p&gt;以下是好不容易挤出来的只言片语，纪念一下和你们与iGEM的渊源。&lt;/p&gt;
 "><i class="fa fa-qq"></i></a>
                                                         <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://zhangyumeng1sjtu.github.io/post/first-post/&sharesource=weibo&title=致2020 SJTU-BioX-Shanghai + " - " + &lt;p&gt;以下是好不容易挤出来的只言片语，纪念一下和你们与iGEM的渊源。&lt;/p&gt;
-&pic="https://zhangyumeng1sjtu.github.io/images/avatar.png?v=1606650989249 "><i class="fa fa-weibo "></i></a>
+&pic="https://zhangyumeng1sjtu.github.io/images/avatar.png?v=1606652559225 "><i class="fa fa-weibo "></i></a>
                                                         
                                                                 </span>
                                                                 <!--en-->
@@ -298,6 +298,27 @@
                     </article>
                 </div>
                 
+                    
+                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
+
+<script>
+    var gitalk = new Gitalk({
+        clientID: '4b8f6589a17d20a0f726',
+        clientSecret: '618527d3b30c07fe50918f2be83441f99b137874',
+        repo: 'zhangyumeng1sjtu.github.io',
+        owner: 'zhangyumeng1sjtu',
+        admin: ['zhangyumeng1sjtu'],
+        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+                            
+                                        
                                             
             </div>
     </div>
@@ -358,7 +379,7 @@
                     CheckVersion();
                     
                     var newDate = new Date();
-                    newDate.setTime(1606650989249);
+                    newDate.setTime(1606652559225);
                     console.log(" Blog Update Time: " + newDate.toLocaleDateString());
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>
