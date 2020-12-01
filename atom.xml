@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhangyumeng1sjtu.github.io</id>
     <title>Ymzhang&apos;s Blog</title>
-    <updated>2020-12-01T10:58:20.858Z</updated>
+    <updated>2020-12-01T11:07:04.309Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhangyumeng1sjtu.github.io"/>
     <link rel="self" href="https://zhangyumeng1sjtu.github.io/atom.xml"/>
@@ -19,27 +19,26 @@
 ]]></summary>
         <content type="html"><![CDATA[<h1 id="lecture-1-introduction">Lecture 1 Introduction</h1>
 <!-- more -->
-<p>[toc]</p>
 <h2 id="why-networks">Why Networks?</h2>
 <h3 id="many-types-of-data-are-networks-and-graphs">Many Types of Data are Networks and Graphs</h3>
-<p><strong>Networks</strong>: A general language for describing complex systems of interating entities.（描述复杂系统中的关联实体）</p>
-<p>Two types of Networks/Graphs:</p>
+<p><strong>Networks</strong>: A general language for describing complex systems of interating entities.（描述复杂系统中的关联实体）<br>
+Two types of Networks/Graphs:</p>
 <ol>
 <li>Networks (Natural Graph): Society, Communication systems, Interaction between genes/proteins</li>
 <li>Information Graphs: Information, Knowledge, Similarity networks<br>
 <img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-2.png" alt="" width="700" height="300" loading="lazy"></li>
 </ol>
 <h3 id="networks-and-applications">Networks and Applications</h3>
-<p>Questions: 网络系统是怎样组织的，如何描述网络的属性，如何利用网络的关联结构等</p>
-<p>Ways to analyze networks:</p>
+<p>Questions: 网络系统是怎样组织的，如何描述网络的属性，如何利用网络的关联结构等<br>
+Ways to analyze networks:</p>
 <ol>
 <li>对结点的属性进行预测（Node classification）</li>
 <li>预测两个结点之间是否存在连接边（Link prediction）</li>
 <li>识别紧密联系的结点簇（Community detection）</li>
-<li>衡量结点或者网络之间的相似性（Network similarity）</li>
+<li>衡量结点或者网络之间的相似性（Network similarity）<br>
+Network applications (exmaples):<br>
+<img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-3.png" alt="" width="800" height="300" loading="lazy"></li>
 </ol>
-<p>Network applications (exmaples):<br>
-<img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-3.png" alt="" width="700" height="300" loading="lazy"></p>
 <h2 id="sturcture-of-graphs">Sturcture of Graphs</h2>
 <p><strong>Definition</strong>: A network is a collection of objects where some pairs of objects are connected by links<br>
 <strong>Components</strong>:<br>
