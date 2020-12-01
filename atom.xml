@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhangyumeng1sjtu.github.io</id>
     <title>Ymzhang&apos;s Blog</title>
-    <updated>2020-12-01T12:16:34.454Z</updated>
+    <updated>2020-12-01T12:43:27.107Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhangyumeng1sjtu.github.io"/>
     <link rel="self" href="https://zhangyumeng1sjtu.github.io/atom.xml"/>
@@ -57,7 +57,7 @@ Node Degree <span class="katex"><span class="katex-mathml"><math><semantics><mro
 <h3 id="representing-graphs">Representing Graphs</h3>
 <ol>
 <li>Adjacency Matrix (邻接矩阵)<br>
-<img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-5.png" alt="" width="500" height="300" loading="lazy"></li>
+<img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-5.png" alt="" width="600" height="350" loading="lazy"></li>
 <li>Edge list (图中所有边的集合)</li>
 <li>Adjacency List (邻接表，适合表示大的稀疏矩阵)<br>
 <img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-6.png" alt="" width="300" height="150" loading="lazy"><br>
