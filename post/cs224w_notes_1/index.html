@@ -2,10 +2,9 @@
 <html>
 
 <head>
-    
-                <meta charset="utf-8" />
+    <meta charset="utf-8" />
 <title>
-    Friends | Ymzhang&#39;s Blog
+    Ymzhang&#39;s Blog
 </title>
 <!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
@@ -46,7 +45,6 @@
                                 })();
                             </script>
                             
-                    
 </head>
 
 <body>
@@ -198,24 +196,159 @@
                 <div class="container">
                     <article class="post-wrap">
                         <header class="post-header">
-                            <h1 class="post-title zh">
-                                &#x53CB;&#x94FE;
+                            <h1 class="post-title">
+                                Stanford CS224W Notes -- Lecture 1
                             </h1>
-                            <h1 class="post-title en">
-                                Friends
-                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        Ymzhang's Blog
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2020-12-01</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">1.1
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">223</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="https://zhangyumeng1sjtu.github.io/tag/xosd8_U-o/">CS224W</a>
+                                
+                            </span>
+                                        
+                                </div>
+                                
                         </header>
+                        
                         <div class="post-content">
+                            <h1 id="lecture-1-introduction">Lecture 1 Introduction</h1>
+<!-- more -->
+<p>[toc]</p>
+<h2 id="why-networks">Why Networks?</h2>
+<h3 id="many-types-of-data-are-networks-and-graphs">Many Types of Data are Networks and Graphs</h3>
+<p><strong>Networks</strong>: A general language for describing complex systems of interating entities.（描述复杂系统中的关联实体）</p>
+<p>Two types of Networks/Graphs:</p>
+<ol>
+<li>Networks (Natural Graph): Society, Communication systems, Interaction between genes/proteins</li>
+<li>Information Graphs: Information, Knowledge, Similarity networks<br>
+<img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-2.png" alt="" width="700" height="300" loading="lazy"></li>
+</ol>
+<h3 id="networks-and-applications">Networks and Applications</h3>
+<p>Questions: 网络系统是怎样组织的，如何描述网络的属性，如何利用网络的关联结构等</p>
+<p>Ways to analyze networks:</p>
+<ol>
+<li>对结点的属性进行预测（Node classification）</li>
+<li>预测两个结点之间是否存在连接边（Link prediction）</li>
+<li>识别紧密联系的结点簇（Community detection）</li>
+<li>衡量结点或者网络之间的相似性（Network similarity）</li>
+</ol>
+<p>Network applications (exmaples):<br>
+<img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-3.png" alt="" width="700" height="300" loading="lazy"></p>
+<h2 id="sturcture-of-graphs">Sturcture of Graphs</h2>
+<p><strong>Definition</strong>: A network is a collection of objects where some pairs of objects are connected by links<br>
+<strong>Components</strong>:<br>
+Object: nodes (结点), vertices (顶点)，用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span></span></span></span>表示<br>
+Interactions: links, edges (边)，用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span></span></span>表示<br>
+System: network, graph，用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mo>(</mo><mi>V</mi><mo separator="true">,</mo><mi>E</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">G(V,E)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span></span>表示</p>
+<h3 id="choice-of-network-representation">Choice of Network Representation</h3>
+<p>有向图和无向图<img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-4.png" alt="" width="500" height="300" loading="lazy"></p>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#lecture-1-introduction">Lecture 1 Introduction</a>
+<ul>
+<li><a href="#why-networks">Why Networks?</a>
+<ul>
+<li><a href="#many-types-of-data-are-networks-and-graphs">Many Types of Data are Networks and Graphs</a></li>
+<li><a href="#networks-and-applications">Networks and Applications</a></li>
+</ul>
+</li>
+<li><a href="#sturcture-of-graphs">Sturcture of Graphs</a>
+<ul>
+<li><a href="#choice-of-network-representation">Choice of Network Representation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                            </div>
                             
                                 
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>Ymzhang's Blog</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="https://zhangyumeng1sjtu.github.io/post/cs224w_notes_1/">https://zhangyumeng1sjtu.github.io/post/cs224w_notes_1/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
                                         
-                        </div>
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zhangyumeng1sjtu.github.io/post/cs224w_notes_1/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhangyumeng1sjtu.github.io/post/cs224w_notes_1/&sharesource=qzone&title=Stanford CS224W Notes -- Lecture 1&pics=https://zhangyumeng1sjtu.github.io/images/avatar.png?v=1606820286169&summary=&lt;h1 id=&#34;lecture-1-introduction&#34;&gt;Lecture 1 Introduction&lt;/h1&gt;
+"><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://zhangyumeng1sjtu.github.io/post/cs224w_notes_1/&sharesource=weibo&title=Stanford CS224W Notes -- Lecture 1 + " - " + &lt;h1 id=&#34;lecture-1-introduction&#34;&gt;Lecture 1 Introduction&lt;/h1&gt;
+&pic="https://zhangyumeng1sjtu.github.io/images/avatar.png?v=1606820286169 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="https://zhangyumeng1sjtu.github.io/tag/xosd8_U-o/">#
+                                                CS224W
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://zhangyumeng1sjtu.github.io/post/about_me/">
+                                                                                                    关于自己 --生信打工人的自述
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
                     </article>
                 </div>
-            </div>
-            
                 
-                    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                    
+                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
 <div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
@@ -233,9 +366,12 @@
 
     gitalk.render('gitalk-container')
 </script>
-                        
-                                    
+                            
                                         
+                                            
+            </div>
+    </div>
+    </div>
     </div>
     
         <footer id="footer" class="footer">
@@ -292,6 +428,10 @@
                     console.log(" Blog Update Time: " + newDate.toLocaleDateString());
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>
+        </div>
 </body>
+<script>
+    scroll();
+</script>
 
 </html>
