@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhangyumeng1sjtu.github.io</id>
     <title>Ymzhang&apos;s Blog</title>
-    <updated>2020-12-01T12:43:27.107Z</updated>
+    <updated>2020-12-01T13:24:23.872Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhangyumeng1sjtu.github.io"/>
     <link rel="self" href="https://zhangyumeng1sjtu.github.io/atom.xml"/>
@@ -72,9 +72,9 @@ Bridge edge: 如果去掉这条边 <span class="katex"><span class="katex-mathml
 Articulation node: 如果去掉这个结点 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> disconnected<br>
 Strongly connected directed graph: 强连通图，有向图两两结点间存在双向的路径<br>
 Weakly connected directed graph: 弱连通图，不考虑有向图中边的方向<br>
-Strongly connected components (SCCs): 强连通分支<br>
-<img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-8.png" alt="" width="550" height="350" loading="lazy"></li>
+Strongly connected components (SCCs): 强连通分支</li>
 </ol>
+<figure data-type="image" tabindex="1"><img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-8.png" alt="" width="550" height="350" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
