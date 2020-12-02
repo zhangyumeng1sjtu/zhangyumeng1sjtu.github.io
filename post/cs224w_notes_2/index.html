@@ -1,21 +1,234 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://zhangyumeng1sjtu.github.io</id>
-    <title>Ymzhang&apos;s Blog</title>
-    <updated>2020-12-02T07:00:07.473Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://zhangyumeng1sjtu.github.io"/>
-    <link rel="self" href="https://zhangyumeng1sjtu.github.io/atom.xml"/>
-    <logo>https://zhangyumeng1sjtu.github.io/images/avatar.png</logo>
-    <icon>https://zhangyumeng1sjtu.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Ymzhang&apos;s Blog</rights>
-    <entry>
-        <title type="html"><![CDATA[Stanford CS224W Notes -- Lecture 2]]></title>
-        <id>https://zhangyumeng1sjtu.github.io/post/cs224w_notes_2/</id>
-        <link href="https://zhangyumeng1sjtu.github.io/post/cs224w_notes_2/">
-        </link>
-        <updated>2020-12-02T03:30:30.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="lecture-2-properties-of-networks-random-graph-models">Lecture 2 Properties of Networks, Random Graph Models</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    Ymzhang&#39;s Blog
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Yumeng Zhang">
+<meta name="description" content="a bioinformatics undergraduate in SJTU">
+<meta name="keywords" content="SJTU,Bioinformatics,Shanghai">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://zhangyumeng1sjtu.github.io/styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                <!--点击特效-->
+                <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/love.min.js"></script>
+                
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://zhangyumeng1sjtu.github.io">
+                    Ymzhang&#39;s Blog
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        Home
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        Archives
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        Tags
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        Posts
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1606892405172" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://zhangyumeng1sjtu.github.io">
+                            Ymzhang&#39;s Blog
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1606892405172" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            Home
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            Archives
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            Tags
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            Posts
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Stanford CS224W Notes -- Lecture 2
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        Ymzhang's Blog
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2020-12-02</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">5.5
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">1138</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="https://zhangyumeng1sjtu.github.io/tag/xosd8_U-o/">CS224W</a>
+                                
+                            </span>
+                                        
+                                </div>
+                                
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://zhangyumeng1sjtu.github.io/post-images/cs224w_notes_2.png" alt="">
+                          
+                        <div class="post-content">
+                            <h1 id="lecture-2-properties-of-networks-random-graph-models">Lecture 2 Properties of Networks, Random Graph Models</h1>
 <h2 id="how-to-measure-a-network">How to Measure a Network</h2>
 <h3 id="key-network-properties">Key Network Properties</h3>
 <ol>
@@ -89,113 +302,181 @@ Stochastic Kronecker Graph</p>
 </li>
 <li>在图<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">G</span></span></span></span>中增加边<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span></li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Stanford CS224W Notes -- Lecture 1]]></title>
-        <id>https://zhangyumeng1sjtu.github.io/post/cs224w_notes_1/</id>
-        <link href="https://zhangyumeng1sjtu.github.io/post/cs224w_notes_1/">
-        </link>
-        <updated>2020-12-01T10:00:12.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="lecture-1-introduction">Lecture 1 Introduction</h1>
-<h2 id="why-networks">Why Networks?</h2>
-<h3 id="many-types-of-data-are-networks-and-graphs">Many Types of Data are Networks and Graphs</h3>
-<p><strong>Networks</strong>: A general language for describing complex systems of interating entities.（描述复杂系统中的关联实体）<br>
-Two types of Networks/Graphs:</p>
-<ol>
-<li>Networks (Natural Graph): Society, Communication systems, Interaction between genes/proteins</li>
-<li>Information Graphs: Information, Knowledge, Similarity networks<br>
-<img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-1.png" alt="" width="700" height="300" loading="lazy"><br>
-<img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-2.png" alt="" width="700" height="300" loading="lazy"></li>
-</ol>
-<h3 id="networks-and-applications">Networks and Applications</h3>
-<p>Questions: 网络系统是怎样组织的，如何描述网络的属性，如何利用网络的关联结构等<br>
-Ways to analyze networks:</p>
-<ol>
-<li>对结点的属性进行预测（Node classification）</li>
-<li>预测两个结点之间是否存在连接边（Link prediction）</li>
-<li>识别紧密联系的结点簇（Community detection）</li>
-<li>衡量结点或者网络之间的相似性（Network similarity）<br>
-Network applications (exmaples):<br>
-<img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-3.png" alt="" width="800" height="300" loading="lazy"></li>
-</ol>
-<h2 id="sturcture-of-graphs">Sturcture of Graphs</h2>
-<p><strong>Definition</strong>: A network is a collection of objects where some pairs of objects are connected by links<br>
-<strong>Components</strong>:<br>
-Object: nodes (结点), vertices (顶点)，用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span></span></span></span>表示<br>
-Interactions: links, edges (边)，用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span></span></span>表示<br>
-System: network, graph，用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mo>(</mo><mi>V</mi><mo separator="true">,</mo><mi>E</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">G(V,E)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">G</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span></span>表示</p>
-<h3 id="choice-of-network-representation">Choice of Network Representation</h3>
-<p>有向图和无向图<br>
-<img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-4.png" alt="" width="500" height="300" loading="lazy"><br>
-Node Degree <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>k</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">k_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03148em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> the edges adjacent to node <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> (连接边数)<br>
-<strong>Avg. Degree</strong> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>k</mi><mo>ˉ</mo></mover><mo>=</mo><mo>&lt;</mo><mi>k</mi><mo>&gt;</mo><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></msubsup><msub><mi>k</mi><mi>i</mi></msub><mo>=</mo><mfrac><mrow><mn>2</mn><mi>E</mi></mrow><mi>N</mi></mfrac></mrow><annotation encoding="application/x-tex">\bar{k}=&lt;k&gt;=\frac{1}{N}\sum_{i=1}^Nk_i = \frac{2E}{N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8312199999999998em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8312199999999998em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.26344em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">ˉ</span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.326231em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.981231em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03148em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathdefault mtight" style="margin-right:0.05764em;">E</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> (Undirected)<br>
-<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><msub><mi>k</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mo>ˉ</mo></mover><mo>=</mo><mover accent="true"><msub><mi>k</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mo>ˉ</mo></mover><mo separator="true">,</mo><mover accent="true"><mi>k</mi><mo>ˉ</mo></mover><mo>=</mo><mfrac><mi>E</mi><mi>N</mi></mfrac></mrow><annotation encoding="application/x-tex">\bar{k_{in}}=\bar{k_{out}}, \bar{k} = \frac{E}{N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9812199999999999em;vertical-align:-0.15em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8312199999999998em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.03148em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.26344em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">ˉ</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0256599999999998em;vertical-align:-0.19444em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8312199999999998em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.03148em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">o</span><span class="mord mathdefault mtight">u</span><span class="mord mathdefault mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.26344em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">ˉ</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8312199999999998em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.26344em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">ˉ</span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05764em;">E</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> (Directed)<br>
-<strong>Complete Graph</strong>(完全图) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>E</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>N</mi><mo>(</mo><mi>N</mi><mo>−</mo><mn>1</mn><mo>)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">E_{max} = \frac{N(N-1)}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span><span class="mopen mtight">(</span><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> (average degree = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">N-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>)<br>
-<strong>Bipartite Graph</strong>(二分图) 两个没有交集的顶点集<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>U</mi><mo separator="true">,</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">U,V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span></span></span></span>，每条边连接分别属于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">U</span></span></span></span>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span></span></span></span>的两个结点 （Authors-to-Papers, Actors-to-Movies）</p>
-<h3 id="representing-graphs">Representing Graphs</h3>
-<ol>
-<li>Adjacency Matrix (邻接矩阵)<br>
-<img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-5.png" alt="" width="600" height="350" loading="lazy"></li>
-<li>Edge list (图中所有边的集合)</li>
-<li>Adjacency List (邻接表，适合表示大的稀疏矩阵)<br>
-<img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-6.png" alt="" width="300" height="150" loading="lazy"><br>
-大多数Real-world Network是稀疏的 (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mo>≪</mo><msub><mi>E</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo separator="true">,</mo><mover accent="true"><mi>k</mi><mo>ˉ</mo></mover><mo>≪</mo><mi>N</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">E \ll E_{max}, \bar{k} \ll N-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≪</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0256599999999998em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8312199999999998em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.26344em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">ˉ</span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≪</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>), 网络的Density为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mi>E</mi><msup><mi>N</mi><mn>2</mn></msup></mfrac></mrow><annotation encoding="application/x-tex">\frac{E}{N^2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05764em;">E</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><br>
-Edge Attributions: Weight (frequency of communication), Ranking (best/second best friend…), Type (friend, co-worker), Sign: Trust vs. Distrust......<br>
-<strong>More Types of Graphs</strong>：加权图，自环图，多重图<br>
-<img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-7.png" alt="" width="800" height="600" loading="lazy"><br>
-<strong>Connectivity of Graphs</strong><br>
-Connected (undirected) graph: 任意两个结点间存在路径 (path)，连通性可以通过邻接矩阵反映<br>
-Large Component: 极大连通分支，无向图中两两结点相互连通的最大子图<br>
-Bridge edge: 如果去掉这条边 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> disconnected<br>
-Articulation node: 如果去掉这个结点 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span> disconnected<br>
-Strongly connected directed graph: 强连通图，有向图两两结点间存在双向的路径<br>
-Weakly connected directed graph: 弱连通图，不考虑有向图中边的方向<br>
-Strongly connected components (SCCs): 强连通分支</li>
-</ol>
-<figure data-type="image" tabindex="1"><img src="https://zhangyumeng1sjtu.github.io/post-images/fig1-8.png" alt="" width="550" height="350" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于自己 --生信打工人的自述]]></title>
-        <id>https://zhangyumeng1sjtu.github.io/post/about_me/</id>
-        <link href="https://zhangyumeng1sjtu.github.io/post/about_me/">
-        </link>
-        <updated>2020-11-29T13:48:33.000Z</updated>
-        <summary type="html"><![CDATA[<p>工具人三连：nsdd mrlw bxhl</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>工具人三连：nsdd mrlw bxhl</p>
-<!-- more -->
-<p>鄙人张昱朦，1999年4月生，上海乡下人，目前是上海交通大学生命科学技术学院生物信息专业2017级本科生，高中毕业于华东师范大学第二附属中学。学科方向主要是生物信息学（微生物学背景为主），此外对NGS数据分析、机器学习和深度学习等领域算一知半解，生物基础较弱，代码能力不强（所以是dd）。<br>
-一直打工得不到理想结果的时候，就想写一些七七八八的东西，可能兴致来了会写一些某些课程或者文章的学习笔记，可能会分享自己做的还算成功的项目，但是估计一般就po一po日常生活（就这...）。<br>
-<img src="https://zhangyumeng1sjtu.github.io/post-images/WechatIMG315.jpeg" alt="" width="550" height="350" loading="lazy"><br>
-未来会继续在交大读硕士，想早点赚钱（干饭太积极，钱不够花），还是主要做生物学和计算机科学的交叉，具体兴趣可能是想做一些图机器学习方法在生物网络的应用。<br>
-人不算帅（眼睛比较小，脸有点大），学术不精，爱喝奶茶，想出去玩，单身可撩（划去）。希望发发post能缓解打工过程中自闭的情绪，最好会有人（fupo）关注我、评论我。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[致2020 SJTU-BioX-Shanghai]]></title>
-        <id>https://zhangyumeng1sjtu.github.io/post/2020_igem/</id>
-        <link href="https://zhangyumeng1sjtu.github.io/post/2020_igem/">
-        </link>
-        <updated>2020-11-28T13:57:24.000Z</updated>
-        <summary type="html"><![CDATA[<p>以下是好不容易挤出来的只言片语，纪念一下和你们与iGEM的渊源。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>以下是好不容易挤出来的只言片语，纪念一下和你们与iGEM的渊源。</p>
-<!-- more -->
-<p>去年今日，满怀对波士顿之旅憧憬的我成为了你们的同路人，当时怎么也不会想到这一年来的曲曲折折，也想不到有你们一起走过个人和iGEM队伍的起起落落。<br>
-这个夏天之前，可能你们对我的印象停留在第一次相遇时那个高冷正经的模样，可能是那听得云里雾里的文献分享， 可能是......半年多销声匿迹，是对项目的茫然不解，是对未来的举足无措，是失去了对远赴重洋的期许，是挣扎在大三下的内卷竞争中...... 线上一周又一周的组会，哪一次不是一边挂着zoom，一边忙着一些琐碎的小事......<br>
-直到7月初，我不知为何想要一起申请提前回到学校，可能是需要一个更安静的环境来面对人生的一次重大转折吧。于是，我们的故事就从那时正式写起。这个夏天我第一次知道了什么是CRISPR/Cas9基因编辑系统，配了第一块琼脂胶，提了第一管质粒，第一次下载snapgene，第一次舒舒服服地躺在办公室的床上小憩...... 当桌上单向历里的日子一页又一页被撕去，我们迎来一个又一个带着口罩的新面孔的回归。<br>
-<img src="https://zhangyumeng1sjtu.github.io/post-images/WechatIMG308.jpeg" alt="" width="550" height="350" loading="lazy"><br>
-可能是我们队伍的惯例，实验过程从构建到表征到最后筛选，一整个夏天的光景全用在构建报告系统上了。我不太清楚项目和实验的进展如何，只感觉这夏日的晚风能让我沉浸在这短暂的美好中。断网那天的小恐龙游戏，吴姐姐在白板上画的名字，每顿饭局后的猜数字，可可爱爱的小马老师，等不到流星的电草歌会，以及见证了一段甜蜜的故事（酸），有幸在落寞的时候遇见你们，暂时忘却了不确定的未来与归宿。<br>
-<img src="https://zhangyumeng1sjtu.github.io/post-images/WechatIMG312.png" alt="" width="550" height="350" loading="lazy"><br>
-&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp再说说自己在队伍里的打工任务吧，CRISPR/Cas9脱靶相关的模型和算法真的太多太多，自己就是简简单单把学过的东西努力融合到项目的背景中去。最后，主要完成了一个脱靶位点预测工具，一个脱靶率动力学模型和一个错配PCR相关的网络模型。诚然，我实在找不到数据完成iGEM最喜欢的基因回路建模（常微分方程组），可能就没法在Model方面给项目加分了吧。<br>
-<img src="https://zhangyumeng1sjtu.github.io/post-images/WechatIMG306.jpeg" alt="" width="550" height="350" loading="lazy"><br>
-从秋天里第一杯奶茶再到冬日里第一杯奶茶，尽管目前选择的方向不会是自己最喜欢、最想做的，尽管iGEM最后的Medal不尽如人意，尽管再也没有理由去躺在办公室的那张床上；可能我们在准备wiki，presentation video，poster和judging session的过程中存在不少的缺憾，可能我们在收官的这个月因为课业和人际关系等等变得焦虑，浮躁，力不从心。但是2020年的失落不差这一次，2020年与你们一起的收获才是真正弥足珍贵。<br>
-<img src="https://zhangyumeng1sjtu.github.io/post-images/WechatIMG307.jpeg" alt="" width="550" height="350" loading="lazy"><br>
-最后，希望Koyilee再也不会和某人一块做实验了，冯女士下次不要再点奶茶三兄弟加珍珠了，陈总有机会带我一起去K歌，fzz啥时候再一起吃糯米甜甜，郑总啥时候带我去参观城堡，江总以后可以一块看球，李博一定可以做好最优化大作业，吴姐姐快快快给我讲八卦，小温下次啥时候一起点奶茶，泉泉以后还可以找你画图吗，ax以后还是可以问我R，龙龙一定能尽快摆脱信工苦海，小红不要把我带来的章鱼搞没了，阿明未来的科研之路一切顺利，圆圆继续好好做你们课题组生化，Judy下学期来选生信系的课呀，钟博和冯女士的大项目能有突破。也许现在的期许是我与你们之间莫大的缘分。<br>
-还记得八月可依队长在饭后游戏里提到大家可以改进的地方，她对我是这么说的，你应该、有能力做得更好。当然后来也不止她一个人这么提过，首先感谢你们的期许，然后我会尽力去实现，最后把这句话回赠给大家，特别是给将要把我们项目继续做下去的同志。<br>
-2021 SJTU-BioX-Shanghai 加油！</p>
-]]></content>
-    </entry>
-</feed>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#lecture-2-properties-of-networks-random-graph-models">Lecture 2 Properties of Networks, Random Graph Models</a>
+<ul>
+<li><a href="#how-to-measure-a-network">How to Measure a Network</a>
+<ul>
+<li><a href="#key-network-properties">Key Network Properties</a></li>
+<li><a href="#measure-real-world-networks">Measure Real-world Networks</a></li>
+</ul>
+</li>
+<li><a href="#graph-models">Graph Models</a>
+<ul>
+<li><a href="#erd%C3%B6s-renyi-random-graphs">Erdös-Renyi Random Graphs</a></li>
+<li><a href="#the-small-world-model">The Small-World Model</a></li>
+<li><a href="#kronecker-graph-model">Kronecker Graph Model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>Ymzhang's Blog</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="https://zhangyumeng1sjtu.github.io/post/cs224w_notes_2/">https://zhangyumeng1sjtu.github.io/post/cs224w_notes_2/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zhangyumeng1sjtu.github.io/post/cs224w_notes_2/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhangyumeng1sjtu.github.io/post/cs224w_notes_2/&sharesource=qzone&title=Stanford CS224W Notes -- Lecture 2&pics=https://zhangyumeng1sjtu.github.io/images/avatar.png?v=1606892405172&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://zhangyumeng1sjtu.github.io/post/cs224w_notes_2/&sharesource=weibo&title=Stanford CS224W Notes -- Lecture 2 + " - " + &pic="https://zhangyumeng1sjtu.github.io/images/avatar.png?v=1606892405172 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="https://zhangyumeng1sjtu.github.io/tag/xosd8_U-o/">#
+                                                CS224W
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://zhangyumeng1sjtu.github.io/post/cs224w_notes_1/">
+                                                                                                    Stanford CS224W Notes -- Lecture 1
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                    
+                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
+
+<script>
+    var gitalk = new Gitalk({
+        clientID: '4b8f6589a17d20a0f726',
+        clientSecret: '618527d3b30c07fe50918f2be83441f99b137874',
+        repo: 'zhangyumeng1sjtu.github.io',
+        owner: 'zhangyumeng1sjtu',
+        admin: ['zhangyumeng1sjtu'],
+        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+                            
+                                        
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                        
+                            
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        Ymzhang&#39;s Blog &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1606892405172);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>
