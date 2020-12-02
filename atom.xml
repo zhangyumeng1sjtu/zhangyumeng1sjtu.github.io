@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhangyumeng1sjtu.github.io</id>
     <title>Ymzhang&apos;s Blog</title>
-    <updated>2020-12-01T17:32:52.191Z</updated>
+    <updated>2020-12-02T02:16:13.616Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhangyumeng1sjtu.github.io"/>
     <link rel="self" href="https://zhangyumeng1sjtu.github.io/atom.xml"/>
@@ -96,8 +96,8 @@ Strongly connected components (SCCs): 强连通分支</li>
     </entry>
     <entry>
         <title type="html"><![CDATA[致2020 SJTU-BioX-Shanghai]]></title>
-        <id>https://zhangyumeng1sjtu.github.io/post/first-post/</id>
-        <link href="https://zhangyumeng1sjtu.github.io/post/first-post/">
+        <id>https://zhangyumeng1sjtu.github.io/post/2020_igem/</id>
+        <link href="https://zhangyumeng1sjtu.github.io/post/2020_igem/">
         </link>
         <updated>2020-11-28T13:57:24.000Z</updated>
         <summary type="html"><![CDATA[<p>以下是好不容易挤出来的只言片语，纪念一下和你们与iGEM的渊源。</p>

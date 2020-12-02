@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    Ymzhang&#39;s Blog
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Yumeng Zhang">
+<meta name="description" content="a bioinformatics undergraduate in SJTU">
+<meta name="keywords" content="SJTU,Bioinformatics,Shanghai">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://zhangyumeng1sjtu.github.io/styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                <!--点击特效-->
+                <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/love.min.js"></script>
+                
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://zhangyumeng1sjtu.github.io">
+                    Ymzhang&#39;s Blog
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        Home
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        Archives
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        Tags
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        Posts
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1606875369981" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://zhangyumeng1sjtu.github.io">
+                            Ymzhang&#39;s Blog
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1606875369981" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            Home
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            Archives
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            Tags
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            Posts
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                致2020 SJTU-BioX-Shanghai
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        Ymzhang's Blog
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2020-11-28</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">4.2
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">1215</a></span>
+                                    
+                                </div>
+                                
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://zhangyumeng1sjtu.github.io/post-images/2020_igem.jpg" alt="">
+                          
+                        <div class="post-content">
+                            <p>以下是好不容易挤出来的只言片语，纪念一下和你们与iGEM的渊源。</p>
+<!-- more -->
+<p>去年今日，满怀对波士顿之旅憧憬的我成为了你们的同路人，当时怎么也不会想到这一年来的曲曲折折，也想不到有你们一起走过个人和iGEM队伍的起起落落。<br>
+这个夏天之前，可能你们对我的印象停留在第一次相遇时那个高冷正经的模样，可能是那听得云里雾里的文献分享， 可能是......半年多销声匿迹，是对项目的茫然不解，是对未来的举足无措，是失去了对远赴重洋的期许，是挣扎在大三下的内卷竞争中...... 线上一周又一周的组会，哪一次不是一边挂着zoom，一边忙着一些琐碎的小事......<br>
+直到7月初，我不知为何想要一起申请提前回到学校，可能是需要一个更安静的环境来面对人生的一次重大转折吧。于是，我们的故事就从那时正式写起。这个夏天我第一次知道了什么是CRISPR/Cas9基因编辑系统，配了第一块琼脂胶，提了第一管质粒，第一次下载snapgene，第一次舒舒服服地躺在办公室的床上小憩...... 当桌上单向历里的日子一页又一页被撕去，我们迎来一个又一个带着口罩的新面孔的回归。<br>
+<img src="https://zhangyumeng1sjtu.github.io/post-images/WechatIMG308.jpeg" alt="" width="550" height="350" loading="lazy"><br>
+可能是我们队伍的惯例，实验过程从构建到表征到最后筛选，一整个夏天的光景全用在构建报告系统上了。我不太清楚项目和实验的进展如何，只感觉这夏日的晚风能让我沉浸在这短暂的美好中。断网那天的小恐龙游戏，吴姐姐在白板上画的名字，每顿饭局后的猜数字，可可爱爱的小马老师，等不到流星的电草歌会，以及见证了一段甜蜜的故事（酸），有幸在落寞的时候遇见你们，暂时忘却了不确定的未来与归宿。<br>
+<img src="https://zhangyumeng1sjtu.github.io/post-images/WechatIMG312.png" alt="" width="550" height="350" loading="lazy"><br>
+&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp再说说自己在队伍里的打工任务吧，CRISPR/Cas9脱靶相关的模型和算法真的太多太多，自己就是简简单单把学过的东西努力融合到项目的背景中去。最后，主要完成了一个脱靶位点预测工具，一个脱靶率动力学模型和一个错配PCR相关的网络模型。诚然，我实在找不到数据完成iGEM最喜欢的基因回路建模（常微分方程组），可能就没法在Model方面给项目加分了吧。<br>
+<img src="https://zhangyumeng1sjtu.github.io/post-images/WechatIMG306.jpeg" alt="" width="550" height="350" loading="lazy"><br>
+从秋天里第一杯奶茶再到冬日里第一杯奶茶，尽管目前选择的方向不会是自己最喜欢、最想做的，尽管iGEM最后的Medal不尽如人意，尽管再也没有理由去躺在办公室的那张床上；可能我们在准备wiki，presentation video，poster和judging session的过程中存在不少的缺憾，可能我们在收官的这个月因为课业和人际关系等等变得焦虑，浮躁，力不从心。但是2020年的失落不差这一次，2020年与你们一起的收获才是真正弥足珍贵。<br>
+<img src="https://zhangyumeng1sjtu.github.io/post-images/WechatIMG307.jpeg" alt="" width="550" height="350" loading="lazy"><br>
+最后，希望Koyilee再也不会和某人一块做实验了，冯女士下次不要再点奶茶三兄弟加珍珠了，陈总有机会带我一起去K歌，fzz啥时候再一起吃糯米甜甜，郑总啥时候带我去参观城堡，江总以后可以一块看球，李博一定可以做好最优化大作业，吴姐姐快快快给我讲八卦，小温下次啥时候一起点奶茶，泉泉以后还可以找你画图吗，ax以后还是可以问我R，龙龙一定能尽快摆脱信工苦海，小红不要把我带来的章鱼搞没了，阿明未来的科研之路一切顺利，圆圆继续好好做你们课题组生化，Judy下学期来选生信系的课呀，钟博和冯女士的大项目能有突破。也许现在的期许是我与你们之间莫大的缘分。<br>
+还记得八月可依队长在饭后游戏里提到大家可以改进的地方，她对我是这么说的，你应该、有能力做得更好。当然后来也不止她一个人这么提过，首先感谢你们的期许，然后我会尽力去实现，最后把这句话回赠给大家，特别是给将要把我们项目继续做下去的同志。<br>
+2021 SJTU-BioX-Shanghai 加油！</p>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>Ymzhang's Blog</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="https://zhangyumeng1sjtu.github.io/post/2020_igem/">https://zhangyumeng1sjtu.github.io/post/2020_igem/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://zhangyumeng1sjtu.github.io/post/2020_igem/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zhangyumeng1sjtu.github.io/post/2020_igem/&sharesource=qzone&title=致2020 SJTU-BioX-Shanghai&pics=https://zhangyumeng1sjtu.github.io/images/avatar.png?v=1606875369981&summary=&lt;p&gt;以下是好不容易挤出来的只言片语，纪念一下和你们与iGEM的渊源。&lt;/p&gt;
+"><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://zhangyumeng1sjtu.github.io/post/2020_igem/&sharesource=weibo&title=致2020 SJTU-BioX-Shanghai + " - " + &lt;p&gt;以下是好不容易挤出来的只言片语，纪念一下和你们与iGEM的渊源。&lt;/p&gt;
+&pic="https://zhangyumeng1sjtu.github.io/images/avatar.png?v=1606875369981 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://zhangyumeng1sjtu.github.io/post/about_me/">
+                                                                                            关于自己 --生信打工人的自述
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                </section>
+                    </article>
+                </div>
+                
+                    
+                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container" style="width: 100%;max-width: 780px;margin: auto;"></div>
+
+<script>
+    var gitalk = new Gitalk({
+        clientID: '4b8f6589a17d20a0f726',
+        clientSecret: '618527d3b30c07fe50918f2be83441f99b137874',
+        repo: 'zhangyumeng1sjtu.github.io',
+        owner: 'zhangyumeng1sjtu',
+        admin: ['zhangyumeng1sjtu'],
+        id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+        distractionFreeMode: false // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+</script>
+                            
+                                        
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                        
+                            
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        Ymzhang&#39;s Blog &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.6
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1606875369981);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>
