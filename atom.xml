@@ -2,13 +2,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhangyumeng1sjtu.github.io</id>
     <title>Ymzhang&apos;s Blog</title>
-    <updated>2020-12-27T15:22:23.482Z</updated>
+    <updated>2020-12-31T12:01:08.900Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhangyumeng1sjtu.github.io"/>
     <link rel="self" href="https://zhangyumeng1sjtu.github.io/atom.xml"/>
     <logo>https://zhangyumeng1sjtu.github.io/images/avatar.png</logo>
     <icon>https://zhangyumeng1sjtu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Ymzhang&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[My 2020]]></title>
+        <id>https://zhangyumeng1sjtu.github.io/post/my-2020/</id>
+        <link href="https://zhangyumeng1sjtu.github.io/post/my-2020/">
+        </link>
+        <updated>2020-12-31T11:55:04.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://zhangyumeng1sjtu.github.io/post-images/1609415983613.gif" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Stanford CS224W Notes -- Lecture 2]]></title>
         <id>https://zhangyumeng1sjtu.github.io/post/cs224w_notes_2/</id>
