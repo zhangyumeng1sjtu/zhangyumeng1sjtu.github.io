@@ -13,7 +13,7 @@ redirect_from:
 Education
 =========
 
-**2024.9 -- Present			**Monash University
+**2024.9 -- Present**			Monash University
 
 *Ph.D. in Computational Biology*
 
