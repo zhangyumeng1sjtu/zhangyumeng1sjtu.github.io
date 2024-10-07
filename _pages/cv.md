@@ -13,36 +13,41 @@ redirect_from:
 Education
 =========
 
+2024.9 -- 2028.3 (Expected)	Monash University
+
+    Ph.D. in Computational Biology
+
+2021.9 -- 2024.6 			Shanghai Jiao Tong University
+
+    M.Sc. in Biology
+
+2017.9 -- 2021.6			Shanghai Jiao Tong University
+
+    B.Sc. in Bioinformatics
+
 Work experience
 ===============
+
+2023.7 -- 2024.4			Monash University
+
+    Research Student
+
+2021.6 -- 2021.9			Shanghai Artificial Intelligence Laboratory
+
+    Research Intern
+
+Awards
+======
+
+2024					Excellent Graduate of Shanghai | Shanghai Municipal Education Commission
+
+2022					National Scholarship | Ministry of Education, China
+
+2020					The International Genetically Engineered Machine Competition Silver Medal | iGEM Foundation
 
 Skills
 ======
 
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-============
-
-<ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-
-Talks
-=====
-
-<ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-
-Teaching
-========
-
-<ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+* Programming Languages: Python, R, Bash
+* Tech Skills: Deep Learning, NGS Data Analysis, PyMOL, SQL, LATEX
+* Languages: Chinese Mandarin, English (TOEFL: 107)
