@@ -8,7 +8,7 @@ redirect_from:
 ---
 {% include base_path %}
 
-`<embed width="100%" height="800" src="http://zhangyumeng1sjtu.github.io/files/YumengZhang-Resume-202410.pdf" />`
+`[Download PDF]()"http://zhangyumeng1sjtu.github.io/files/YumengZhang-Resume-202410.pdf")`
 
 Education
 =========
