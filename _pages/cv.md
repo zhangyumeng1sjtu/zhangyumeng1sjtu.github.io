@@ -13,37 +13,37 @@ redirect_from:
 Education
 =========
 
-2024.9 -- 2028.3 (Expected)	Monash University
+**2024.9 -- Present			**Monash University
 
-Ph.D. in Computational Biology
+*Ph.D. in Computational Biology*
 
-2021.9 -- 2024.6 			Shanghai Jiao Tong University
+**2021.9 -- 2024.6** 			Shanghai Jiao Tong University
 
-M.Sc. in Biology
+*M.Sc. in Biology*
 
-2017.9 -- 2021.6			Shanghai Jiao Tong University
+**2017.9 -- 2021.6**			Shanghai Jiao Tong University
 
-B.Sc. in Bioinformatics
+*B.Sc. in Bioinformatics*
 
 Work experience
 ===============
 
-2023.7 -- 2024.4			Monash University
+**2023.7 -- 2024.4**			Monash University
 
-Research Student
+*Research Student*
 
-2021.6 -- 2021.9			Shanghai Artificial Intelligence Laboratory
+**2021.6 -- 2021.9**			Shanghai Artificial Intelligence Laboratory
 
-Research Intern
+*Research Intern*
 
 Awards
 ======
 
-2024		Excellent Graduate of Shanghai
+**2024**		Excellent Graduate of Shanghai
 
-2022		National Scholarship
+**2022**		National Scholarship
 
-2020		The International Genetically Engineered Machine Competition Silver Medal
+**2020**		The International Genetically Engineered Machine Competition Silver Medal
 
 Skills
 ======
