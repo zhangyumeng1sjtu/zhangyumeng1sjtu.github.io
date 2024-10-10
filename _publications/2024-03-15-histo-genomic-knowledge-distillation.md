@@ -1,0 +1,13 @@
+---
+title: "Histo-genomic knowledge distillation for cancer prognosis from histopathology whole slide images"
+collection: publications
+category: preprints
+permalink: /publication/2024-03-15-histo-genomic-knowledge-distillation
+excerpt: ''
+date: 2024-03-15
+venue: 'arXiv'
+slidesurl: ''
+paperurl: 'http://zhangyumeng1sjtu.github.io/files/2403.10040v2.pdf'
+citation: 'Z Wang, <b>Y Zhang</b>, Y Xu, S Imoto, H Chen & J Song (2024) Histo-genomic knowledge distillation for cancer prognosis from histopathology whole slide images. <i>arXiv</i>, 2403.10040.'
+---
+Histo-genomic multi-modal methods have recently emerged as a powerful paradigm, demonstrating significant potential for improving cancer prognosis. However, genome sequencing, unlike histopathology imaging, is still not widely accessible in underdeveloped regions, limiting the application of these multi-modal approaches in clinical settings. To address this, we propose a novel Genome-informed Hyper-Attention Network, termed G-HANet, which is capable of effectively distilling the histo-genomic knowledge during training to elevate uni-modal whole slide image (WSI)-based inference for the first time. Compared with traditional knowledge distillation methods (i.e., teacher-student architecture) in other tasks, our end-to-end model is superior in terms of training efficiency and learning cross-modal interactions. Specifically, the network comprises the cross-modal associating branch (CAB) and hyper-attention survival branch (HSB). Through the genomic data reconstruction from WSIs, CAB effectively distills the associations between functional genotypes and morphological phenotypes and offers insights into the gene expression profiles in the feature space. Subsequently, HSB leverages the distilled histo-genomic associations as well as the generated morphology-based weights to achieve the hyper-attention modeling of the patients from both histopathology and genomic perspectives to improve cancer prognosis. Extensive experiments are conducted on five TCGA benchmarking datasets and the results demonstrate that G-HANet significantly outperforms the state-of-the-art WSI-based methods and achieves competitive performance with genome-based and multi-modal methods. G-HANet is expected to be explored as a useful tool by the research community to address the current bottleneck of insufficient histo-genomic data pairing in the context of cancer prognosis and precision oncology.
