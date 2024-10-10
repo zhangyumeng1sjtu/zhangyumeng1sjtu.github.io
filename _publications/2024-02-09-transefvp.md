@@ -1,5 +1,5 @@
 ---
-title: "TransEFVP: a two-stage approach for the prediction of human pathogenic variants based on protein sequence embedding fusionTransEFVP: a two-stage approach for the prediction of human pathogenic variants based on protein sequence embedding fusion"
+title: "TransEFVP: a two-stage approach for the prediction of human pathogenic variants based on protein sequence embedding fusion"
 collection: publications
 category: articles
 permalink: /publication/2024-02-09-transevfp
