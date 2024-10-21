@@ -3,10 +3,8 @@ title: "Supervised contrastive learning enhances MHC-II peptide binding affinity
 collection: publications
 category: preprints
 permalink: /publication/2023-12-21-supervised-contrastive-learning
-excerpt: ''
 date: 2023-12-21
 venue: 'bioRxiv'
-slidesurl: ''
 paperurl: 'http://zhangyumeng1sjtu.github.io/files/2023.12.21.572942v3.full.pdf'
 citation: 'LC Shen, L Yan, Z Liu, <b>Y Zhang</b>, Z Wang, Y Guo, J Rossjohn, J Song & DJ Yu. (2023) ConBoTNet: supervised contrastive learning enhances MHC-II peptide binding affinity prediction. <i>bioRxiv</i>, 2023.12.21.572942.'
 ---

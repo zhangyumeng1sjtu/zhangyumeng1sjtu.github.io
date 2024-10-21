@@ -22,7 +22,7 @@ repository               : "zhangyumeng1sjtu.github.io"
 author:
   # Biographic information
   avatar           : "profile.jpg"
-  name             : "Yumeng Zhang"
+  name             : "Yumeng Zhang (张昱朦)"
   pronouns         :  
   bio              : "PhD student @MonashBDI"
   location         : "Melbourne, Australia"
@@ -37,7 +37,7 @@ author:
   orcid            : "https://orcid.org/0000-0002-6444-292X"
   semantic         : # URL
   pubmed           : 
-  researchgate     : # URL
+  researchgate     : "https://www.researchgate.net/profile/Yumeng-Zhang-27"
 
   # Repositories and software development
   bitbucket        : # Username - Update with your username on the site
