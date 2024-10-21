@@ -3,6 +3,7 @@ title: "Transposition with Tn 3-family elements occurs through interaction with 
 collection: publications
 category: articles
 permalink: /publication/2024-08-09-transposition-with-tn3-family-elements
+excerpt: ''
 date: 2024-08-09
 venue: 'Nucleic Acids Research'
 paperurl: 'http://zhangyumeng1sjtu.github.io/files/gkae674.pdf'

@@ -3,6 +3,7 @@ title: "TransEFVP: a two-stage approach for the prediction of human pathogenic v
 collection: publications
 category: articles
 permalink: /publication/2024-02-09-transevfp
+excerpt: ''
 date: 2024-02-09
 venue: 'Journal of Chemical Information and Modeling'
 paperurl: 'http://zhangyumeng1sjtu.github.io/files/yan-et-al-2024-transefvp.pdf'

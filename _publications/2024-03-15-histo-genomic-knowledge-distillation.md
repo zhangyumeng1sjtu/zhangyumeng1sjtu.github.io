@@ -3,6 +3,7 @@ title: "Histo-genomic knowledge distillation for cancer prognosis from histopath
 collection: publications
 category: preprints
 permalink: /publication/2024-03-15-histo-genomic-knowledge-distillation
+excerpt: ''
 date: 2024-03-15
 venue: 'arXiv'
 paperurl: 'http://zhangyumeng1sjtu.github.io/files/2403.10040v2.pdf'

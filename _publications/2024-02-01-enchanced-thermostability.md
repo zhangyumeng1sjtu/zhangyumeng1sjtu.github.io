@@ -3,6 +3,7 @@ title: "Enhanced thermostability of Streptomyces mobaraensis transglutaminase vi
 collection: publications
 category: articles
 permalink: /publication/2024-02-01-enchanced-thermostability
+excerpt: ''
 date: 2024-02-01
 venue: 'New Journal of Chemistry'
 paperurl: 'http://zhangyumeng1sjtu.github.io/files/d3nj04708c.pdf'
