@@ -8,13 +8,14 @@
 
 # Basic Site Settings
 locale                   : "en-US"
+site_theme               : "default"
 title                    : "Yumeng Zhang"
 title_separator          : "-"
 name                     : &name "Yumeng Zhang"
-description              : &description "PhD student at Monash University"
+description              : &description "PhD candidate at Monash University"
 url                      : https://zhangyumeng1sjtu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "zhangyumeng1sjtu.github.io"
+repository               : "zhangyumeng1sjtu/zhangyumeng1sjtu.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -24,9 +25,9 @@ author:
   avatar           : "profile.jpg"
   name             : "Yumeng Zhang (张昱朦)"
   pronouns         :  
-  bio              : "PhD candidate @MonashBDI"
+  bio              : "PhD candidate in Computational Biology"
   location         : "Melbourne, Australia"
-  employer         : 
+  employer         : "Monash University"
   uri              : # URL
   email            : "Yumeng.Zhang1@monash.edu" 
 
