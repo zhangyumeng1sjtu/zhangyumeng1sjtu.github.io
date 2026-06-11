@@ -11,7 +11,7 @@ layout: compress
     {% include head/custom.html %}
   </head>
 
-  <body>
+  <body id="site-top">
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
@@ -24,6 +24,10 @@ layout: compress
         {% include footer.html %}
       </footer>
     </div>
+
+    <a href="#site-top" class="back-to-top" aria-label="Return to top">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </a>
 
     {% include scripts.html %}
 

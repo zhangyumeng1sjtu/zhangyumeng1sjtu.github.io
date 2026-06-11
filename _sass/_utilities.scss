@@ -395,6 +395,33 @@ body:hover .visually-hidden button {
   }
 }
 
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: #fff;
+  background-color: $link-color;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(#000, 0.18);
+  text-decoration: none;
+
+  &:hover {
+    color: #fff;
+    background-color: $link-color-hover;
+    text-decoration: none;
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
 
 /*
    Wells
